@@ -58,36 +58,22 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: var(--text-dim);
+  color: var(--primary) !important;
   font-weight: 700;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.3s ease;
-  padding: 0.5rem 0.8rem;
-  border-radius: 8px;
-}
-
-.navbar-links a:hover {
-  color: var(--text-main);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.nav-divider {
-  width: 1px;
-  height: 15px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.nav-social-btn {
-  color: var(--primary) !important;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
   border: 1px solid rgba(0, 242, 254, 0.2);
 }
 
-.nav-social-btn:hover {
+.navbar-links a:hover {
   background: rgba(0, 242, 254, 0.1) !important;
   border-color: var(--primary);
   box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 968px) {
