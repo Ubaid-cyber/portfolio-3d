@@ -1,0 +1,98 @@
+.about {
+  padding: 1.8rem 0 8rem 0;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  scroll-margin-top: 90px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.about-para {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.about-para strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.about-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--text-main);
+  font-family: 'Outfit', sans-serif;
+}
+
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+
+.skill-category {
+  margin-bottom: 3rem;
+}
+
+.skill-category h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-tags span {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-tags span:hover {
+  background: rgba(79, 172, 254, 0.1);
+  border-color: var(--primary);
+  color: var(--text-main);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

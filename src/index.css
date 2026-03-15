@@ -1,0 +1,81 @@
+:root {
+  --primary: #00f2fe;
+  --secondary: #4facfe;
+  --accent: #ff00ff;
+  --bg-dark: #050505;
+  --bg-darker: #020202;
+  --text-main: #ffffff;
+  --text-dim: #b0b0b0;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.premium-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Position and scale Stats to be small and clear of the logo */
+#root + div, 
+body > div[style*="z-index: 10000"] {
+  top: 80px !important; /* Move below the navbar/logo */
+  left: 15px !important;
+  transform: scale(0.8);
+  transform-origin: top left;
+  opacity: 0.8;
+  pointer-events: none !important; /* Prevent 'disappearing' on click */
+}
+
+/* Hide extra panels to keep it slim */
+#root + div canvas:not(:first-child),
+body > div[style*="z-index: 10000"] canvas:not(:first-child) {
+  display: none !important;
+}

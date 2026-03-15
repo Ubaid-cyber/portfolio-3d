@@ -1,0 +1,113 @@
+.navbar {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  width: calc(100% - 4rem);
+  max-width: 1200px;
+  z-index: 2000;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2.22rem;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scrolled State - Floating Island */
+.navbar.scrolled {
+  top: 1rem;
+  width: max-content;
+  max-width: 90%;
+}
+
+.navbar.scrolled .nav-wrapper {
+  background: rgba(5, 5, 5, 0.6);
+  backdrop-filter: blur(20px);
+  padding: 0.8rem 2rem;
+  border-color: rgba(0, 242, 254, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+.logo-text {
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.logo-text .dot {
+  color: var(--primary);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--text-dim);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+}
+
+.navbar-links a:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-divider {
+  width: 1px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-social-btn {
+  color: var(--primary) !important;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.nav-social-btn:hover {
+  background: rgba(0, 242, 254, 0.1) !important;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+@media (max-width: 968px) {
+  .navbar {
+    width: calc(100% - 2rem);
+    top: 1rem;
+  }
+  .navbar.scrolled {
+    min-width: calc(100% - 2rem);
+  }
+  .nav-wrapper {
+    padding: 1rem 1.5rem;
+  }
+  .navbar-links {
+    gap: 1rem;
+  }
+  .logo-text {
+    font-size: 1rem;
+  }
+  .nav-divider {
+    display: none;
+  }
+}
