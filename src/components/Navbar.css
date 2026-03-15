@@ -115,4 +115,7 @@
   .nav-divider {
     display: none;
   }
+  .navbar-links li:last-child {
+    display: none;
+  }
 }
