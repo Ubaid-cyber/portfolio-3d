@@ -1,7 +1,8 @@
 .navbar {
   position: fixed;
   top: 1.5rem;
-  left: 48%;
+  left: 50%;
+  transform: translateX(-50%);
   width: calc(100% - 4rem);
   max-width: 1200px;
   z-index: 2000;
@@ -85,8 +86,10 @@
 
 @media (max-width: 968px) {
   .navbar {
-    width: calc(100% - 2rem);
+    width: 92%;
     top: 1rem;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
   .navbar.scrolled {
     min-width: calc(100% - 2rem);
