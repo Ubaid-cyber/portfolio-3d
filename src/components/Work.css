@@ -8,8 +8,8 @@
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -97,8 +97,21 @@
   opacity: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .work-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-card {
+    padding: 2rem 1.5rem;
+  }
+  .project-title {
+    font-size: 1.5rem;
   }
 }

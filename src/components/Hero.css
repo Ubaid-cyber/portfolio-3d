@@ -167,3 +167,19 @@
     height: 450px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .accent-text {
+    font-size: 2.5rem;
+  }
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+  }
+}
