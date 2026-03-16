@@ -18,9 +18,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           />
           <motion.div 
             className="modal-content glass"
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            initial={{ opacity: 0, scale: 0.9, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            exit={{ opacity: 0, scale: 0.9, y: 30 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
             <button className="close-btn" onClick={onClose}>&times;</button>
